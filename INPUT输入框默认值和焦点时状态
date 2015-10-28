@@ -1,0 +1,3 @@
+<input value="初始值" onFocus="if(value==defaultValue)
+{value='';this.style.color='#000'}" onBlur="if(!value)
+{value=defaultValue; this.style.color='#999'}" style="color:#999" />
