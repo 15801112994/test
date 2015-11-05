@@ -1,0 +1,16 @@
+//动态时间
+$(function(){  
+    setInterval(function(){
+		var d=new Date();
+		var ctime=d.getFullYear()+'-'+checkTime(parseInt(d.getMonth()+1))+'-'+checkTime(d.getDate())+' '+checkTime(d.getHours())+':'+checkTime(d.getMinutes())+':'+checkTime(d.getSeconds());
+        $("#ctime").text(ctime);  
+    },1000);  
+});
+function checkTime(i)
+{
+	if (i<10) 
+	{
+		i="0" + i;
+	}
+	return i
+}
