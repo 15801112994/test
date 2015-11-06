@@ -1,0 +1,6 @@
+function fuzhi(){
+		var name=document.getElementById("ddaa").value;
+		document.getElementById('nicheng').value=name;
+		email=name+"@test";
+		document.getElementById('email').value=email;
+	}
