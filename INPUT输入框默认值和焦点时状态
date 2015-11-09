@@ -1,3 +1,22 @@
 <input value="初始值" onFocus="if(value==defaultValue)
 {value='';this.style.color='#000'}" onBlur="if(!value)
 {value=defaultValue; this.style.color='#999'}" style="color:#999" />
+
+密&nbsp;&nbsp;&nbsp;码：<input type="text" value="请输入密码"  name="pwd" id="pwd" class="password" />
+<input type="password" id="pwd2" class="password" name="pwd2" />
+
+CSS样式 #pwd{display:none;}
+jquery 代码:
+
+var pwd=$("#pwd");
+var pwd2 = $("#pwd2");
+pwd.focus(function(){
+	pwd2.show().focus();
+	pwd.hide();
+})
+pwd2.blur(function(){
+	if(pwd2.val()==''){
+		pwd.show();
+		pwd2.hide();
+	}
+})
